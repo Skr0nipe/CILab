@@ -6,7 +6,13 @@ var base_url = "http://localhost:49003/";
 console.log('this is a new guy');
 
 describe("Hello World Server", function() {
-  describe("GET /", function() {
+   describe("GET /", function() {
+     beforeEach(function(done) {
+         setTimeout(function() {
+	       value = 0;
+	       done();	
+	 }, 1);
+    });
     it("returns status code 200", function(done) {
       request.get(base_url, function(error, response, body) {
         expect(response.statusCode).toBe(200);
