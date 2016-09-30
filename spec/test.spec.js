@@ -1,5 +1,5 @@
 var request = require("request");
-var helloWorld = require("../index.js")
+//var helloWorld = require("../index.js")
 
 var base_url = "http://localhost:49003/";
 
